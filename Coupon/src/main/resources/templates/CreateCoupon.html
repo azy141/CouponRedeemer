@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+
+<title>Create A Coupon</title>
+
+<link rel="stylesheet" href="style_3.css" />
+</head>
+<body>
+	<div class="chat-container">
+		<div class="chat-header">
+			<h2>Create A Coupon</h2>
+		</div>
+
+		<form id="messageForm" name="messageForm" action="CreateCoupon"
+			method="get">
+			<div class="form-group">
+				<div class="input-group clearfix">
+					<span style="color: red" th:text="${errorMessage}"></span><br /> <label
+						for="userid">User Id:</label> <br>
+					<input type="number" min="0" class="form-control"
+						placeholder="User ID" required name="userid"> <br>
+					<br> <label for="value">Value:</label> <br>
+					<input type="number" step="any" min="0" class="form-control"
+						placeholder="10" required name="value"> <br>
+					<br> <label for="currency">Coupon Currency:</label> <br>
+					<input type="text" class="form-control" placeholder="GBP" required
+						name="currency"> <br>
+					<br> <label for="couponId">Coupon ID:</label> <br>
+					<input type="number" min="0" class="form-control" placeholder="452"
+						required name="couponId"> <br>
+					<br> <label for="couponName">Coupon Name:</label> <br>
+					<input type="text" class="form-control"
+						placeholder="ChristmasOffer" required name="couponName"> <br>
+					<br> <label for="usesRemaining">Uses Remaining:</label> <br>
+					<input type="number" min="0" class="form-control" placeholder="2"
+						required name="usesRemaining"> <br>
+					<br> <br>
+					<br>
+					<br>
+					<button type="submit" class="primary">Create</button>
+					<button onclick="location.href='loggedin'" class="primary"
+						type="button">Home</button>
+
+					<br>
+					<br>
+				</div>
+			</div>
+		</form>
+	</div>
+</body>
+</html>

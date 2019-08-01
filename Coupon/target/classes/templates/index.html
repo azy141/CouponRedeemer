@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+
+<title>Login</title>
+
+<link rel="stylesheet" href="style_3.css" />
+</head>
+<body>
+	<h1>Enter your login details</h1>
+	<div class="chat-container">
+		<div class="chat-header">
+			<h2>Login to Coupon Manager</h2>
+		</div>
+		<span style="color: red" th:text="${errorMessage}"></span><br />
+		<form id="messageForm" name="messageForm" action="checkLogin"
+			method="get">
+			<div class="form-group">
+				<div class="input-group clearfix">
+
+					<label for="email">Email Address:</label> <input type="text"
+						class="form-control" placeholder="Email" required name="email">
+					<br> <br> <br> <br> <label for="password">Password:</label><br>
+					<input type="password" class="form-control" placeholder="Password"
+						required name="password"> <br> <br> <br>
+					<button type="submit" class="primary">Login</button>
+
+					<button onclick="location.href='registerlink'" class="primary"
+						type="button">Register</button>
+				</div>
+			</div>
+		</form>
+
+	</div>
+
+</body>
+</html>
+

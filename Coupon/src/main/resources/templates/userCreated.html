@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+
+<title>User Details</title>
+
+
+<link rel="stylesheet" href="style_3.css" />
+</head>
+<body>
+	<h1>User Created</h1>
+	<div class="chat-container">
+		<div class="chat-header">
+			<h2>User Created</h2>
+		</div>
+
+		First Name:<span th:text="${User.firstName}"></span><br /> Last Name:<span
+			th:text="${User.lastName}"></span><br /> Email:<span
+			th:text="${User.email}"></span><br /> User Name:<span
+			th:text="${User.userName}"></span><br />
+
+
+		<button onclick="location.href='/'" class="primary" type="button">
+			Click Here To Login</button>
+	</div>
+
+
+
+
+</body>
+</html>
+

@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+
+<title>Coupon List</title>
+<h1>Coupon List</h1>
+
+
+<link rel="stylesheet" href="style_3.css" />
+</head>
+<body>
+	<div class="chat-container">
+		<div class="chat-header"></div>
+
+
+		<article>
+
+			<ul th:each="CouponList,iStat: ${CouponListother}">
+				<li th:text="${'Coupon Id:' + CouponList.couponId}">
+				<li th:text="${'Coupon Value:' + CouponList.value}">
+				<li th:text="${'Coupon Currency:' + CouponList.currency}">
+				<li th:text="${'Coupon Uses:' + CouponList.usesRemaining}">
+			</ul>
+		</article>
+
+
+		<button onclick="location.href='loggedin'" class="primary"
+			type="button">Home</button>
+
+
+	</div>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+
+<title>Login</title>
+
+<link rel="stylesheet" href="style_3.css" />
+</head>
+<body>
+	<div class="chat-container">
+		<div class="chat-header">
+			<h2>Register to Coupon Manager</h2>
+		</div>
+
+		<form id="messageForm" name="messageForm" action=getUser method="post">
+			<div class="form-group">
+				<div class="input-group clearfix">
+					<span style="color: red" th:text="${userCreationError}"></span><br />
+					<label for="firstName">First Name:</label> <br>
+					<input type="text" class="form-control" placeholder="Steven"
+						required name="firstName"> <br>
+					<br> <label for="lastName">Last Name:</label> <br>
+					<input type="text" class="form-control" placeholder="Smith"
+						required name="lastName"> <br>
+					<br> <label for="email">Email Address:</label><br>
+					<input type="text" class="form-control" placeholder="Email"
+						required name="email"> <br>
+					<br> <label for="userName">Username:</label><br> <input
+						type="text" class="form-control" placeholder="SteveSmith236"
+						required name="userName"> <br>
+					<br> <label for="password">Password:</label> <br> <input
+						type="password" class="form-control" placeholder="Password"
+						required name="password"> <br> <br> <label
+						for="password2">Confirm Password:</label> <br> <input
+						type="password" class="form-control" placeholder="Password"
+						required name="password2"><br> <br>
+					<br> <label for="number">ID Number:</label> <br> <input
+						type="number" min="0" class="form-control" placeholder="number"
+						required name="userId"><br> <br>
+					<br>
+					<br>
+					<button type="submit" class="primary">Register</button>
+					<button onclick="location.href='/'" class="primary" type="button">Home</button>
+
+					<br>
+					<br>
+				</div>
+			</div>
+		</form>
+	</div>
+</body>
+</html>
